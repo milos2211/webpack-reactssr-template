@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux"
 import { getPost } from "../../actions/posts"
 import { withRouter } from "react-router-dom"
 
-const Post = ({ post, match }) => {
-	console.log(post)
+const Post = ({ post, match, dispatch }) => {
+	useEffect(() => {
+		dispatch(getPost(match.params))
+	}, [])
 	return (
-		<div>{post.text}</div>
+		<div>{post && post.text}</div>
 	)
 }
 
