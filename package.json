@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "less": "^3.10.3",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
